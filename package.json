@@ -2,7 +2,7 @@
   "name": "python-class-autocompletor",
   "displayName": "python-class-autocompletor",
   "description": "python-class-autocompletor",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "publisher": "fullstackjam",
   "engines": {
     "vscode": "^1.80.0"

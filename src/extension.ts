@@ -20,14 +20,14 @@ export function activate(context: vscode.ExtensionContext) {
 
                 if (previousLine.trim() === '@classmethod') {
                     const completionItem = new vscode.CompletionItem('cls', vscode.CompletionItemKind.Snippet);
-                    completionItem.insertText = new vscode.SnippetString('cls');
+                    completionItem.insertText = new vscode.SnippetString('cls${0}');
                     completionItem.documentation = new vscode.MarkdownString("Insert 'cls' keyword.");
                     return [completionItem];
                 }
 
                 if (previousLine.trim() === '@property' || previousLine.trim() === '@abstractmethod') {
                     const completionItem = new vscode.CompletionItem('self', vscode.CompletionItemKind.Snippet);
-                    completionItem.insertText = new vscode.SnippetString('self');
+                    completionItem.insertText = new vscode.SnippetString('self${0}');
                     completionItem.documentation = new vscode.MarkdownString("Insert 'self' keyword.");
                     return [completionItem];
                 }
@@ -35,7 +35,7 @@ export function activate(context: vscode.ExtensionContext) {
                 let match = lineUntilPosition.match(/^\s*def\s+\w+\s*\($/);
                 if (match) {
                     const completionItem = new vscode.CompletionItem('self', vscode.CompletionItemKind.Snippet);
-                    completionItem.insertText = new vscode.SnippetString('self');
+                    completionItem.insertText = new vscode.SnippetString('self${0}');
                     completionItem.documentation = new vscode.MarkdownString("Insert 'self' keyword.");
                     return [completionItem];
                 }

@@ -25,9 +25,9 @@ Please report any issues on the [GitHub repository](https://github.com/fullstack
 
 ## Release Notes
 
-### 0.0.1
+### 0.0.2
 
-Initial release of Python Class Autocompletion.
+Fix a little bug.
 
 ## Contributing
 
